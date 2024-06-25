@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movies for this month</title>
+<style>
+.header {
+    background-color: rgb(121, 6, 53);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color:white;
+    padding: 0.3% 0.3%;
+}
+.leftColumn{
+    width:25%;
+    background-color: rgb(20, 20, 20);
+    float: left;
+    padding-bottom: 80%;
+}
+
+#Matrix,#ThePatriot,#TheLivesOfOthers,#LOTR,#BridgeOfSpies,#ThirteenDays {
+    
+    width: auto;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 27%;
+    display: none;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.button {
+    color:white;
+    text-align: center;
+    width: 100%;
+    border: 0px;
+    background-color: rgb(20, 20, 20);
+    padding: 5% 5%;
+}
+
+.button:hover{
+    background-color: rgb(141, 141, 141);
+    color: black;
+}
+
+</style>
+</head>
+<body onload="initial()">
+<div class="header">
+<p>Movies recommended for this month.</p>
+</div>
+<div class="leftColumn">
+<button class = "button" onclick="pressed('button1')">The Matrix</button><br>
+<button class = "button" onclick="pressed('button2')">The Patriot</button><br>
+<button class = "button" onclick="pressed('button3')">The Lives of Others</button><br>
+<button class = "button" onclick="pressed('button4')">The Lord of the Rings: The Fellowship of the Ring</button><br>
+<button class = "button" onclick="pressed('button5')">Bridge of Spies</button><br>
+<button class = "button" onclick="pressed('button6')">Thirteen Days</button>
+</div>
+
+<div id="Matrix">
+    <h1>The Matrix (1999)</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg" style = "width:25%;float:right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">
+    Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. 
+    Neo has always questioned his reality, but the truth is far beyond his imagination. 
+    Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government.
+    As a rebel against the machines, Neo must confront the agents: super-powerful computer programs devoted to stopping Neo and the entire human rebellion.
+    </p>
+    <p><b>Starring:</b> Keanu Reeves, Carrie Ann Moss, Laurence Fishburne, Hugo Weaving</p>
+    <p><b>Directed by:</b> Lana Wachowski, Lilly Wachowski</p>
+    <p><b>Genre:</b> Action, Science fiction</p>
+    <p><b>IMDb Rating:</b> <strong>8.7</strong>/10</p>
+</div>
+
+<div id="ThePatriot">
+    <h1>The Patriot (2000)</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Patriot_promo_poster.jpg/220px-Patriot_promo_poster.jpg" style="width:25%;float:right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">It is 1776 in colonial South Carolina. Benjamin Martin, a French-Indian war hero who is haunted by his past, now wants nothing more than to live peacefully on his small plantation, 
+    and wants no part of a war with the most powerful nation in the world, Great Britain. Meanwhile, his two eldest sons, Gabriel and Thomas, 
+    can't wait to enlist in the newly formed "Continental Army." When South Carolina decides to join the rebellion against England, Gabriel immediately signs up to fight...without his father's permission. 
+    But when Colonel William Tavington, British dragoon, infamous for his brutal tactics, comes and burns the Martin Plantation to the ground, tragedy strikes. 
+    Benjamin quickly finds himself torn between protecting his family, and seeking revenge along with being a part of the birth of a new, young, and ambitious nation.
+    </p>
+    <p><b>Starring:</b> Mel Gibson, Heath Ledger, Jason Isaacs, Joely Richardson, Tom Wilkinson</p>
+    <p><b>Directed by:</b> Roland Emmerich</p>
+    <p><b>Genre:</b> Action, Drama, History</p>
+    <p><b>IMDb Rating:</b> <strong>7.2</strong>/10</p>
+</div>
+
+<div id="TheLivesOfOthers">
+    <h1>The Lives of Others (2006)</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Leben_der_anderen.jpg" style = "width: 25%;float: right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">Gerd Wiesler is an officer with the Stasi, the East German secret police. The film begins in 1984 when Wiesler attends a play written by Georg Dreyman,
+    who is considered by many to be the ultimate example of the loyal citizen. Wiesler has a gut feeling that Dreyman can't be as ideal as he seems, and believes surveillance is called for.
+    The Minister of Culture agrees but only later does Wiesler learn that the Minister sees Dreyman as a rival and lusts after his partner Christa-Maria.
+    The more time he spends listening in on them, the more he comes to care about them. The once rigid Stasi officer begins to intervene in their lives, in a positive way, 
+    protecting them whenever possible. Eventually, Wiesler's activities catch up to him and while there is no proof of wrongdoing, he finds himself in menial jobs - until the unbelievable happens.
+    </p>
+    <p><b>Starring:</b> Ulrich Mühe, Martina Gedeck, Sebastian Koch, Ulrich Tukur</p>
+    <p><b>Directed by:</b> Florian Henckel von Donnersmarck</p>
+    <p><b>Genre:</b> Drama, Mystery, Thriller</p>
+    <p><b>IMDb Rating:</b> <strong>8.4</strong>/10</p>
+</div>
+
+<div id="LOTR">
+    <h1>The Lord of the Rings: The Fellowship of the Ring (2001)</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg" style = "width: 25%;float: right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, 
+    Frodo must make an epic quest to the Cracks of Doom in order to destroy it. However, he does not go alone. 
+    He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise.
+    Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go.
+    Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.
+    </p>
+    <p><b>Starring:</b> Elijah Wood, Ian McKellen, Viggo Mortensen, Christopher Lee</p>
+    <p><b>Directed by:</b> Peter Jackson</p>
+    <p><b>Genre:</b> Action, Adventure, Drama</p>
+    <p><b>IMDb Rating:</b> <strong>8.9</strong>/10</p>
+</div>
+
+<div id="BridgeOfSpies">
+    <h1>Bridge Of Spies(2015)</h1>
+    <p><img src="https://upload.wikimedia.org/wikipedia/en/f/fa/Bridge_of_Spies_poster.jpg" style = "width: 25%;float: right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">In 1957, lawyer James B. Donovan is recruited from his prestigious law firm to defend accused Soviet spy Rudolf Abel. 
+    It's an unenviable task in many respects. Donovan hasn't practiced criminal law since he was a prosecutor at the Nuremburg trials after World War II.
+    Also, the strong anti-Communist mood at the time makes him a target from who think Abel should just be executed. 
+    Abel is convicted but Donovan convinces the judge to sentence him to prison, rather than execute him, as they may at some point in the future want to swap him for an American spy the Soviets might have in custody. 
+    Just such a scenario comes into play when in 1960 U-2 spy pilot Francis Gary Powers is shot down over Soviet territory and taken prisoner. 
+    Donovan is again recruited to act as the intermediary and negotiate swapping Able for the American requiring him to travel to East Berlin crossing the newly built Berlin Wall.
+    </p>
+    <p><b>Starring:</b> Tom Hanks, Mark Rylance</p>
+    <p><b>Directed by:</b> Steven Spielberg</p>
+    <p><b>Genre:</b> Drama, History, Thriller</p>
+    <p><b>IMDb Rating:</b> <strong>7.6</strong>/10</p>
+</div>
+
+<div id="ThirteenDays">
+    <h1>Thirteen Days(2000)</h1>
+    <p><img src = "https://upload.wikimedia.org/wikipedia/en/c/c9/Thirteen_days_poster.jpg" style = "width: 25%;float: right;box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);">In October 1962, President John F. Kennedy (Greenwood) learns about the Soviet Union's plan of placing nuclear weapons in Cuba. 
+    These weapons could wipe out most of the eastern and southern United States in minutes if they become operational. 
+    Kennedy and his advisors must come up with a plan of action against the Soviets.
+    </p>
+    <p><b>Starring:</b> Kevin Costner, Bruce Greenwood</p>
+    <p><b>Directed by:</b> Roger Donaldson</p>
+    <p><b>Genre:</b> Drama, History, Thriller</p>
+    <p><b>IMDb Rating:</b> <strong>7.3</strong>/10</p>
+</div>
+<script>
+function initial(){
+    document.getElementById("Matrix").style.display = "block";
+}
+function pressed(name){
+    if(name === "button1"){
+        document.getElementById("Matrix").style.display = "block";
+        document.getElementById("ThePatriot").style.display = "none";
+        document.getElementById("TheLivesOfOthers").style.display = "none";
+        document.getElementById("LOTR").style.display = "none";
+        document.getElementById("BridgeOfSpies").style.display = "none";
+        document.getElementById("ThirteenDays").style.display = "none";
+    } else if (name === "button2"){
+        document.getElementById("Matrix").style.display = "none";
+        document.getElementById("ThePatriot").style.display = "block";
+        document.getElementById("TheLivesOfOthers").style.display = "none";
+        document.getElementById("LOTR").style.display = "none";
+        document.getElementById("BridgeOfSpies").style.display = "none";
+        document.getElementById("ThirteenDays").style.display = "none";
+    }else if (name === "button3"){
+        document.getElementById("Matrix").style.display = "none";
+        document.getElementById("ThePatriot").style.display = "none";
+        document.getElementById("TheLivesOfOthers").style.display = "block";
+        document.getElementById("LOTR").style.display = "none";
+        document.getElementById("BridgeOfSpies").style.display = "none";
+        document.getElementById("ThirteenDays").style.display = "none";
+    }else if (name === "button4"){
+        document.getElementById("Matrix").style.display = "none";
+        document.getElementById("ThePatriot").style.display = "none";
+        document.getElementById("TheLivesOfOthers").style.display = "none";
+        document.getElementById("LOTR").style.display = "block";
+        document.getElementById("BridgeOfSpies").style.display = "none";
+        document.getElementById("ThirteenDays").style.display = "none";
+    }else if (name === "button5"){
+        document.getElementById("Matrix").style.display = "none";
+        document.getElementById("ThePatriot").style.display = "none";
+        document.getElementById("TheLivesOfOthers").style.display = "none";
+        document.getElementById("LOTR").style.display = "none";
+        document.getElementById("BridgeOfSpies").style.display = "block";
+        document.getElementById("ThirteenDays").style.display = "none";
+    }else if (name === "button6"){
+        document.getElementById("Matrix").style.display = "none";
+        document.getElementById("ThePatriot").style.display = "none";
+        document.getElementById("TheLivesOfOthers").style.display = "none";
+        document.getElementById("LOTR").style.display = "none";
+        document.getElementById("BridgeOfSpies").style.display = "none";
+        document.getElementById("ThirteenDays").style.display = "block";
+    }
+
+
+}
+</script>
+</body>
+</html>
