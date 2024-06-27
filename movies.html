@@ -3,83 +3,36 @@
 <head>
 <title>Movies for this month</title>
 
-<style>
-.header {
-    background-color: rgb(121, 6, 53);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 40px;
-    color:white;
-    padding: 0.3% 0.3%;
-}
+<link rel = "stylesheet" href="stylesheet.css"> 
 
-.leftColumn{
-    width:25%;
-    background-color: rgb(20, 20, 20);
-    float: left;
-}
-
-.image {
-    width:20%;
-    float: right;
-    margin-left: 2%;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
-}
-.MovieContents {
-    width: auto;
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 27%;
-    display: none;
-    animation: fadeIn 1s;
-}
-
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.button {
-    color:white;
-    text-align: center;
-    width: 100%;
-    border: 0px;
-    background-color: rgb(20, 20, 20);
-    padding: 5% 5%;
-}
-
-.button:hover{
-    background-color: rgb(141, 141, 141);
-    color: black;
-}
-
-</style>
+<script src="script.js"></script>
 
 </head>
 
 <body onload="initial()">
+
 <div class="header">
 <p>Movies recommended for this month.</p>
 </div>
+
 <div class="leftColumn">
-<button class = "button" onclick="pressed('button1')">The Matrix</button><br>
-<button class = "button" onclick="pressed('button2')">The Patriot</button><br>
-<button class = "button" onclick="pressed('button3')">The Lives of Others</button><br>
-<button class = "button" onclick="pressed('button4')">The Lord of the Rings: The Fellowship of the Ring</button><br>
-<button class = "button" onclick="pressed('button5')">Bridge of Spies</button><br>
-<button class = "button" onclick="pressed('button6')">Thirteen Days</button>
-<button class = "button" onclick="pressed('button7')">Gladiator</button>
-<button class = "button" onclick="pressed('button8')">Spiderman 2</button>
-<button class = "button" onclick="pressed('button9')">Seabiscuit</button>
-<button class = "button" onclick="pressed('button10')">The Departed</button>
-<button class = "button" onclick="pressed('button11')">Gangs of New York</button>
-<button class = "button" onclick="pressed('button12')">The persuit of happiness</button>
-<button class = "button" onclick="pressed('button13')">Parasite</button>
-<button class = "button" onclick="pressed('button14')">OldBoy</button>
-<button class = "button" onclick="pressed('button15')">Whiplash</button>
-<button class = "button" onclick="pressed('button16')">The Death of Stalin</button>
-<button class = "button" onclick="pressed('button17')">Let the Women Wait</button>
+<button class = "button" onclick="pressed('Matrix')">The Matrix</button><br>
+<button class = "button" onclick="pressed('ThePatriot')">The Patriot</button><br>
+<button class = "button" onclick="pressed('TheLivesOfOthers')">The Lives of Others</button><br>
+<button class = "button" onclick="pressed('LOTR')">The Lord of the Rings: The Fellowship of the Ring</button><br>
+<button class = "button" onclick="pressed('BridgeOfSpies')">Bridge of Spies</button><br>
+<button class = "button" onclick="pressed('ThirteenDays')">Thirteen Days</button>
+<button class = "button" onclick="pressed('Gladiator')">Gladiator</button>
+<button class = "button" onclick="pressed('Spiderman2')">Spiderman 2</button>
+<button class = "button" onclick="pressed('Seabiscuit')">Seabiscuit</button>
+<button class = "button" onclick="pressed('TheDeparted')">The Departed</button>
+<button class = "button" onclick="pressed('GangsOfNewYork')">Gangs of New York</button>
+<button class = "button" onclick="pressed('ThePersuitOfHappyness')">The persuit of happiness</button>
+<button class = "button" onclick="pressed('Parasite')">Parasite</button>
+<button class = "button" onclick="pressed('OldBoy')">OldBoy</button>
+<button class = "button" onclick="pressed('Whiplash')">Whiplash</button>
+<button class = "button" onclick="pressed('TheDeathOfStalin')">The Death of Stalin</button>
+<button class = "button" onclick="pressed('LetTheWomenWait')">Let the Women Wait</button>
 </div>
 
 <div class = "MovieContents" Id = "Matrix">
@@ -180,10 +133,10 @@
     <img class="image" src = "https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png">
     <h1>Gladiator(2000)</h1>
     <p>
-        Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. 
-        Before his death, the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his family condemned to death. 
-        The powerful general is unable to save his family, and his loss of will allows him to get captured and put into the Gladiator games until he dies. 
-        The only desire that fuels him now is the chance to rise to the top so that he will be able to look into the eyes of the man who will feel his revenge.
+    Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. 
+    Before his death, the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his family condemned to death. 
+    The powerful general is unable to save his family, and his loss of will allows him to get captured and put into the Gladiator games until he dies. 
+    The only desire that fuels him now is the chance to rise to the top so that he will be able to look into the eyes of the man who will feel his revenge.
     </p>
     <p><b>Starring:</b> Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed</p>
     <p><b>Directed by:</b> Ridley Scott</p>
@@ -345,323 +298,6 @@
     <p><b>IMDb Rating:</b> <strong>7.7</strong>/10</p>
 </div>
 
-<script>
-function initial(){
-    document.getElementById("Matrix").style.display = "block";
-    const element = getElementsByClassName("leftColumn")
-    element.scrollIntoView();
-}
-
-function pressed(name){
-    if(name === "button1"){
-        document.getElementById("Matrix").style.display = "block";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    } else if (name === "button2"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "block";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button3"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "block";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button4"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "block";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button5"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "block";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button6"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "block";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button7"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "block";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button8"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "block";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button9"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "block";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button10"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "block";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button11"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "block";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button12"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "block";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button13"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "block";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button14"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "block";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button15"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "block";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button16"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "block";
-        document.getElementById("LetTheWomenWait").style.display = "none";
-    }else if (name === "button17"){
-        document.getElementById("Matrix").style.display = "none";
-        document.getElementById("ThePatriot").style.display = "none";
-        document.getElementById("TheLivesOfOthers").style.display = "none";
-        document.getElementById("LOTR").style.display = "none";
-        document.getElementById("BridgeOfSpies").style.display = "none";
-        document.getElementById("ThirteenDays").style.display = "none";
-        document.getElementById("Gladiator").style.display = "none";
-        document.getElementById("Spiderman2").style.display = "none";
-        document.getElementById("Seabiscuit").style.display = "none";
-        document.getElementById("TheDeparted").style.display = "none";
-        document.getElementById("GangsOfNewYork").style.display = "none";
-        document.getElementById("ThePersuitOfHappyness").style.display = "none";
-        document.getElementById("Parasite").style.display = "none";
-        document.getElementById("OldBoy").style.display = "none";
-        document.getElementById("Whiplash").style.display = "none";
-        document.getElementById("TheDeathOfStalin").style.display = "none";
-        document.getElementById("LetTheWomenWait").style.display = "block";
-    }
-
-}
-</script>
 </body>
+
 </html>
